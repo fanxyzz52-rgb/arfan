@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kota Ciamis</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f2f2f2;
+      margin: 0;
+    }
+    header {
+      background-color: #007b5f;
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+    nav {
+      background-color: #004c3f;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    nav button {
+      background: none;
+      border: none;
+      color: white;
+      padding: 14px 20px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+    nav button:hover,
+    nav button.active {
+      background-color: #007b5f;
+    }
+    main {
+      max-width: 900px;
+      margin: 20px auto;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      padding: 20px;
+    }
+    section {
+      display: none;
+    }
+    section.active {
+      display: block;
+    }
+    footer {
+      background-color: #004c3f;
+      color: white;
+      text-align: center;
+      padding: 10px;
+      margin-top: 20px;
+    }
+    img {
+      max-width: 100%;
+      border-radius: 8px;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Kota Ciamis</h1>
+    <p>“Ciamis Manis, Kota Bersejarah dan Penuh Pesona”</p>
+  </header>
+
+  <nav>
+    <button class="active" onclick="showPage('beranda')">Beranda</button>
+    <button onclick="showPage('sejarah')">Sejarah</button>
+    <button onclick="showPage('wisata')">Wisata</button>
+    <button onclick="showPage('kuliner')">Kuliner</button>
+    <button onclick="showPage('kontak')">Kontak</button>
+  </nav>
+
+  <main>
+    <!-- Halaman Beranda -->
+    <section id="beranda" class="active">
+      <h2>Selamat Datang di Kota Ciamis</h2>
+      <p>Ciamis adalah salah satu kabupaten di Provinsi Jawa Barat yang terkenal dengan alamnya yang indah, budaya yang kuat, dan masyarakatnya yang ramah.</p>
+      <img src="Alun alun.jpg" alt="Alun-alun Ciamis">
+    </section>
+
+    <!-- Halaman Sejarah -->
+    <section id="sejarah">
+      <h2>Sejarah Ciamis</h2>
+      <p>Ciamis memiliki sejarah panjang yang berkaitan dengan Kerajaan Galuh, salah satu kerajaan tertua di Jawa Barat. Nama “Ciamis” berasal dari kata “Cai” (air) dan “Amis” (manis), yang berarti air yang manis.</p>
+      <p>Ciamis berawal dari Kerajaan Galuh, dengan pusat pemerintahan yang beberapa kali berpindah, termasuk ke Kawali. Setelah pemindahan pusat pemerintahan ke Imbanagara pada tahun 1642, Ciamis menjadi bagian dari Kerajaan Galuh. Pada tahun 1916, Bupati Raden Tumenggung Sastrawinata secara resmi mengganti nama Kabupaten Galuh menjadi Kabupaten Ciamis.</p>
+      <p>Kabupaten ini memiliki banyak peninggalan sejarah dan budaya Sunda yang masih lestari hingga sekarang.</p>
+    </section>
+
+    <!-- Halaman Wisata -->
+    <section id="wisata">
+      <h2>Wisata di Ciamis</h2>
+      <ul>
+        <li>Situ Lengkong Panjalu</li>
+      </ul>
+      <img src="Situ Lengkong.jpg" alt="Situ Lengkong Panjalu">
+      <ul>
+        <li>Curug Tujuh Cibolang</li>
+      </ul>
+      <img src="curug tujuh cibolang.jpg" alt="Curug Tujuh Cibolang">
+      <ul>
+        <li>Gunung Sawal</li>
+      </ul>
+      <img src="gunung sawal.jpg" alt="Gunung Sawal">
+    </section>
+
+    <!-- Halaman Kuliner -->
+    <section id="kuliner">
+      <h2>Kuliner Khas Ciamis</h2>
+      <ul>
+        <li>Galendo</li>
+      </ul>
+      <img src="galendo.jpg" alt="Galendo Ciamis">
+      <ul>
+        <li>Nasi Tutug Oncom</li>
+      </ul>
+      <img src="nasi tutug.jpg" alt="Nasi Tutug Oncom">
+      <ul>
+        <li>Soto Iyun</li>
+      </ul>
+      <img src="soto iyun.jpg" alt="Soto I">
+    </section>
+
+    <!-- Halaman Kontak -->
+    <section id="kontak">
+      <h2>Kontak Saya</h2>
+      <p><strong>Email:</strong> muhamadarfansiregar456@gmail.com</p>
+      <p><strong>Whaatsap:</strong> 0858-6012-7420</p>
+      <p><strong>Instagram:</strong> <a href="https://www.instagram.com/faannsrgr_?igsh=MTBnZHJrMXRobmw4NA==" target="_blank">_faannsrgr</a></p>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Informasi Kota Ciamis | By:Muhammad Arfan Siregar</p>
+  </footer>
+
+  <script>
+    function showPage(pageId) {
+      document.querySelectorAll('section').forEach(sec => sec.classList.remove('active'));
+      document.getElementById(pageId).classList.add('active');
+
+      document.querySelectorAll('nav button').forEach(btn => btn.classList.remove('active'));
+      event.target.classList.add('active');
+    }
+  </script>
+
+</body>
+</html>
